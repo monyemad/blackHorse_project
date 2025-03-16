@@ -1,9 +1,9 @@
 import 'dart:math';
 
-import 'package:course_project/Widgets/custom_gender.dart';
-import 'package:course_project/Widgets/custom_sizes.dart';
+import 'package:course_project/Screens/lecture_6/bmi_result.dart';
+import 'package:course_project/Widgets/lecture_6/custom_gender.dart';
+import 'package:course_project/Widgets/lecture_6/custom_sizes.dart';
 import 'package:flutter/material.dart';
-import 'package:course_project/Screens/bmi_result.dart';
 
 class BmiScreen extends StatefulWidget {
   const BmiScreen({super.key});

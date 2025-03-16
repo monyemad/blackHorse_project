@@ -1,7 +1,7 @@
 // ignore_for_file: must_be_immutable
 
-import 'package:course_project/Models/colors_class.dart';
-import 'package:course_project/Widgets/custom_colors.dart';
+import 'package:course_project/Models/classes_lecture_5/colors_class.dart';
+import 'package:course_project/Widgets/lecture_5/custom_colors.dart';
 import 'package:flutter/material.dart';
 
 class ColorsScreen extends StatelessWidget {

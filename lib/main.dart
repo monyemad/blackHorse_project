@@ -1,4 +1,4 @@
-import 'package:course_project/Screens/bmi_screen.dart';
+import 'package:course_project/Screens/lecture_6/bmi_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
