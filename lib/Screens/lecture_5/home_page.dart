@@ -1,7 +1,7 @@
-import 'package:course_project/Screens/colors_page.dart';
-import 'package:course_project/Screens/family_page.dart';
-import 'package:course_project/Screens/numbers_page.dart';
-import 'package:course_project/Widgets/custom_category.dart';
+import 'package:course_project/Screens/lecture_5/colors_page.dart';
+import 'package:course_project/Screens/lecture_5/family_page.dart';
+import 'package:course_project/Screens/lecture_5/numbers_page.dart';
+import 'package:course_project/Widgets/lecture_5/custom_category.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {

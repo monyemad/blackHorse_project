@@ -1,7 +1,7 @@
 // ignore_for_file: must_be_immutable
 
-import 'package:course_project/Models/numbers_class.dart';
-import 'package:course_project/Widgets/custom_item.dart';
+import 'package:course_project/Models/classes_lecture_5/numbers_class.dart';
+import 'package:course_project/Widgets/lecture_5/custom_item.dart';
 import 'package:flutter/material.dart';
 
 class NumbersScreen extends StatelessWidget {

@@ -1,4 +1,4 @@
-import 'package:course_project/Models/numbers_class.dart';
+import 'package:course_project/Models/classes_lecture_5/numbers_class.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable

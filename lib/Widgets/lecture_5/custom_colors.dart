@@ -1,4 +1,4 @@
-import 'package:course_project/Models/colors_class.dart';
+import 'package:course_project/Models/classes_lecture_5/colors_class.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable

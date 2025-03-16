@@ -1,4 +1,4 @@
-import 'package:course_project/Screens/bmi_screen.dart';
+import 'package:course_project/Screens/lecture_7_8/home_news.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: BmiScreen(),
+      home: NewsScreen(),
     );
   }
 }

@@ -1,7 +1,7 @@
 // ignore_for_file: must_be_immutable
 
-import 'package:course_project/Models/family_class.dart';
-import 'package:course_project/Widgets/custom_family.dart';
+import 'package:course_project/Models/classes_lecture_5/family_class.dart';
+import 'package:course_project/Widgets/lecture_5/custom_family.dart';
 import 'package:flutter/material.dart';
 
 class FamilyScreen extends StatelessWidget {
