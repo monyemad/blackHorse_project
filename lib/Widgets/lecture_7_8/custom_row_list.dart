@@ -1,6 +1,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:course_project/Models/lecture_7_8/row_list.dart';
+import 'package:course_project/Screens/lecture_7_8/sports_page.dart';
 import 'package:flutter/material.dart';
 
 class CustomRowList extends StatelessWidget {
@@ -28,16 +29,18 @@ class CustomRowList extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.black12,
           borderRadius: BorderRadius.circular(6),
-          border: Border.all(color: Colors.white60)
+          border: Border.all(color: Colors.white70)
         ),
-        child: Text(
-          category.text!,
+        child: TextButton(
+          onPressed: (){Navigator.pushReplacement(context, MaterialPageRoute(
+              builder: category.build!
+          ));},
+          child:Text(category.text!,
           style: const TextStyle(
             color: Colors.white,
               fontWeight: FontWeight.bold,
-              fontSize: 20),
+              fontSize: 20),),)
         ),
-      ),
-    );
+      );
   }
 }

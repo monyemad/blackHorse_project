@@ -1,9 +1,9 @@
 import 'package:course_project/Widgets/lecture_7_8/custom_category.dart';
-import 'package:course_project/Widgets/lecture_7_8/custom_tile.dart';
+import 'package:course_project/Widgets/lecture_7_8/custom_general.dart';
 import 'package:flutter/material.dart';
 
-class NewsScreen extends StatelessWidget {
-  const NewsScreen({super.key});
+class GeneralScreen extends StatelessWidget {
+  const GeneralScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class NewsScreen extends StatelessWidget {
       body: Column(
         children: [
           CustomCategory(),
-          CustomNewsTile(),
+          CustomGeneral(),
         ],
       ),
     );
