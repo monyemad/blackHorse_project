@@ -9,37 +9,37 @@ class NumbersScreen extends StatelessWidget {
 
   List<Numbers> numbers = [
     Numbers(
-      "https://cdn-icons-png.freepik.com/256/12020/12020568.png?uid=R178573337&ga=GA1.1.1715082119.1740527231&semt=ais_hybrid",
+      "assets/numbers/number_one.png",
       "one",
       "Hana",
     ),
     Numbers(
-        "https://cdn-icons-png.freepik.com/256/5124/5124021.png?uid=R178573337&ga=GA1.1.1715082119.1740527231&semt=ais_hybrid",
+        "assets/numbers/number_two.png",
         "two",
         "Dul"),
     Numbers(
-        "https://cdn-icons-png.freepik.com/256/3918/3918537.png?uid=R178573337&ga=GA1.1.1715082119.1740527231&semt=ais_hybrid",
+        "assets/numbers/number_three.png",
         "three",
         "Sam"),
     Numbers(
-        "https://img.freepik.com/premium-vector/apple-apple-fruit-apple-cartoon_520417-717.jpg?uid=R178573337&ga=GA1.1.1715082119.1740527231&semt=ais_hybrid",
+        "assets/numbers/number_four.png",
         "four",
         "Ne"),
     Numbers(
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr5nFLIbtD1QEaQJLA9r25QbyIcr0Vbp5f9A&s",
+      "assets/numbers/number_five.png",
       "five",
       "Daseos",
     ),
     Numbers(
-        "https://img.freepik.com/free-vector/red-apples-pile-white-background_1308-128784.jpg?uid=R178573337&ga=GA1.1.1715082119.1740527231&semt=ais_hybrid",
+        "assets/numbers/number_six.png",
         "six",
         "Yug"),
     Numbers(
-        "https://img.freepik.com/premium-vector/red-apples-pattern-with-handdrawn-icon_851401-10.jpg?uid=R178573337&ga=GA1.1.1715082119.1740527231&semt=ais_hybrid",
+        "assets/numbers/number_seven.png",
         "seven",
         "Ilgob"),
     Numbers(
-        "https://img.freepik.com/premium-vector/apple-vector-illustration-apple-silhouette-vector-bundle_891172-8715.jpg",
+        "assets/numbers/number_eight.png",
         "eight",
         "Yeodeolb"),
   ];

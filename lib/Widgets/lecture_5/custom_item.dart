@@ -17,7 +17,7 @@ class Items extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Image(
-            image: NetworkImage(number.image!),
+            image: AssetImage(number.image!),
             width: 100,
             height: 100,
           ),
