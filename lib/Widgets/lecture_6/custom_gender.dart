@@ -6,12 +6,13 @@ class CustomGender extends StatelessWidget {
       required this.text,
       required this.icon,
       required this.onTap,
-      required this.color});
+      required this.color, required this.iconColor});
 
   final String text;
   final IconData icon;
   final VoidCallback onTap;
   final Color color;
+  final Color iconColor;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +31,7 @@ class CustomGender extends StatelessWidget {
               children: [
                 Icon(
                   icon,
-                  color: Colors.white,
+                  color: iconColor,
                   size: 140,
                 ),
                 Text(

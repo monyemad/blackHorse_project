@@ -1,5 +1,4 @@
-import 'package:course_project/Screens/lecture_5/numbers_page.dart';
-import 'package:course_project/Screens/lecture_7_8/business_page.dart';
+import 'package:course_project/Screens/lecture_10/note_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +12,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: NumbersScreen(),
+      theme: ThemeData(brightness: Brightness.dark, fontFamily: "Dancing Script"),
+      home: const NoteScreen(),
     );
   }
 }

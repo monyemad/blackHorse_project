@@ -1,7 +1,6 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:course_project/Models/lecture_7_8/row_list.dart';
-import 'package:course_project/Screens/lecture_7_8/sports_page.dart';
 import 'package:flutter/material.dart';
 
 class CustomRowList extends StatelessWidget {
