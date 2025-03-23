@@ -5,13 +5,14 @@ class CustomFormField extends StatelessWidget {
       {super.key,
       required this.controller,
       required this.label,
-      required this.hint,
-      this.maxLines = 1});
+      this.hint,
+      this.maxLines = 1, this.onChange});
 
   final TextEditingController controller;
   final String label;
-  final String hint;
+  final String? hint;
   final int maxLines;
+  final String? Function(String?)? onChange;
 
   @override
   Widget build(BuildContext context) {
@@ -23,12 +24,14 @@ class CustomFormField extends StatelessWidget {
           labelText: label,
           focusedBorder: inputBorder(Colors.green)),
       controller: controller,
-      validator: (value){
-        if(value!.isEmpty){
+      keyboardType: TextInputType.text,
+      validator: (value) {
+        if (value!.isEmpty) {
           return "Field is required";
         }
         return null;
       },
+      onChanged: onChange,
       maxLines: maxLines,
     );
   }

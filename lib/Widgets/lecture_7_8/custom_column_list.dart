@@ -19,16 +19,16 @@ class CustomColumnList extends StatelessWidget {
         ClipRRect(
           borderRadius: BorderRadius.circular(15),
           child: Image.network(
-            news.image!,
+            news.image??"https://img.freepik.com/free-vector/press-mass-media-broadcasting-studio-journalists-reporters-characters-hot-online-information-breaking-news-headline-news-content-concept-illustration_335657-2587.jpg?ga=GA1.1.836629263.1742762812&semt=ais_hybrid",
             height: 200,
             width: double.infinity,
             fit: BoxFit.cover,
           ),
         ),
         const SizedBox(height: 8,),
-        Text(news.title!,style: const TextStyle(fontSize: 20,fontWeight: FontWeight.w600),maxLines: 2,overflow: TextOverflow.ellipsis,),
+        Text(news.title,style: const TextStyle(fontSize: 20,fontWeight: FontWeight.w600),maxLines: 2,overflow: TextOverflow.ellipsis,),
         const SizedBox(height: 8,),
-        Text(news.subTitle!,style: const TextStyle(fontSize: 16,color: Colors.black26),),
+        Text(news.subTitle ?? "The Article ended",style: const TextStyle(fontSize: 16,color: Colors.black26),),
       ],
     );
   }

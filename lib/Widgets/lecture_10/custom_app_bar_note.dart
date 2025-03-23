@@ -17,12 +17,12 @@ class AppBarNote extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: Text(text,
           style: TextStyle(
-              fontSize: 20, color: Colors.white,
+              fontSize: 25, color: Colors.white,
               fontFamily: "Agbalumo"
           )),
       actions: [
         Padding(
-          padding: const EdgeInsets.only(right: 16.0),
+          padding: const EdgeInsets.only(right: 18.0,top: 8),
           child: InkWell(
             onTap: onTap,
             child: Container(

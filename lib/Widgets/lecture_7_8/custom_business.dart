@@ -5,18 +5,19 @@ import 'package:course_project/Widgets/lecture_7_8/custom_indicator.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
-class CustomScience extends StatefulWidget {
-  const CustomScience({
+class CustomNewsBusiness extends StatefulWidget {
+  const CustomNewsBusiness({
     super.key,
   });
 
   @override
-  State<CustomScience> createState() => _CustomScienceState();
+  State<CustomNewsBusiness> createState() => _CustomNewsBusinessState();
 }
 
-class _CustomScienceState extends State<CustomScience> {
-  List<NewsTitle> news = [];
+class _CustomNewsBusinessState extends State<CustomNewsBusiness> {
   bool isLoading = true;
+
+  List<NewsTitle> news = [];
 
   @override
   void initState() {
@@ -25,7 +26,7 @@ class _CustomScienceState extends State<CustomScience> {
   }
 
   Future<void> getNews() async {
-    news = await NewsService(Dio()).getNews(category: 'science');
+    news = await NewsService(Dio()).getNews(category: 'business');
     isLoading = false;
     setState(() {});
   }

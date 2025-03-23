@@ -1,7 +1,7 @@
 class NewsTitle {
   String? image;
-  String? title;
+  String title;
   String? subTitle;
 
-  NewsTitle(this.image, this.title, this.subTitle);
+  NewsTitle({this.image, required this.title, this.subTitle});
 }
