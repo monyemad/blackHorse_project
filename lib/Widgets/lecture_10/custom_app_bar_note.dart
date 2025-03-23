@@ -44,7 +44,7 @@ class AppBarNote extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Size get preferredSize => const Size(
-        double.maxFinite,
-        60,
-      );
+    double.maxFinite,
+    60,
+  );
 }

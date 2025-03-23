@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:course_project/Models/notes.dart';
 import 'package:course_project/Models/time.dart';
 import 'package:course_project/Screens/lecture_10/edit_note_page.dart';
@@ -35,6 +37,7 @@ class CustomNote extends StatelessWidget {
                     fontSize: 25,
                     color: Colors.black,
                     overflow: TextOverflow.ellipsis,
+                    fontFamily: "Dancing Script",
                     fontWeight: FontWeight.w400),
               ),
               trailing: IconButton(
@@ -48,7 +51,7 @@ class CustomNote extends StatelessWidget {
                     (Route<dynamic> route) => false);
               },
               subtitle: Text(note.subTitle,
-                  style: TextStyle(fontSize: 20, color: Colors.black87)),
+                  style: TextStyle(fontSize: 20, color: Colors.black87,fontFamily: "Dancing Script")),
             ),
           ],
         ),
