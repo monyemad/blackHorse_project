@@ -1,21 +1,22 @@
-import 'package:course_project/Models/lecture_7_8/column_list.dart';
+import 'package:course_project/Models/lecture_7_8_9/column_list.dart';
 import 'package:course_project/Services/news_service.dart';
-import 'package:course_project/Widgets/lecture_7_8/custom_column_list.dart';
-import 'package:course_project/Widgets/lecture_7_8/custom_indicator.dart';
+import 'package:course_project/Widgets/lecture_7_8_9/custom_column_list.dart';
+import 'package:course_project/Widgets/lecture_7_8_9/custom_indicator.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
-class CustomTechnology extends StatefulWidget {
-  const CustomTechnology({
+class CustomSports extends StatefulWidget {
+  const CustomSports({
     super.key,
   });
 
   @override
-  State<CustomTechnology> createState() => _CustomTechnologyState();
+  State<CustomSports> createState() => _CustomSportsState();
 }
 
-class _CustomTechnologyState extends State<CustomTechnology> {
+class _CustomSportsState extends State<CustomSports> {
   List<NewsTitle> news = [];
+
   bool isLoading = true;
 
   @override
@@ -25,7 +26,7 @@ class _CustomTechnologyState extends State<CustomTechnology> {
   }
 
   Future<void> getNews() async {
-    news = await NewsService(Dio()).getNews(category: 'technology');
+    news = await NewsService(Dio()).getNews(category: 'sports');
     isLoading = false;
     setState(() {});
   }

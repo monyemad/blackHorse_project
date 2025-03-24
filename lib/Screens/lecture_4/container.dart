@@ -1,4 +1,4 @@
-import 'package:course_project/Widgets/custom_box.dart';
+import 'package:course_project/Widgets/lecture_4/custom_box.dart';
 import 'package:flutter/material.dart';
 
 class TestScreen extends StatelessWidget {

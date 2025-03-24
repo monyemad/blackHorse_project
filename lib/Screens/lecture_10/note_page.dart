@@ -1,4 +1,4 @@
-import 'package:course_project/Models/notes.dart';
+import 'package:course_project/Models/lecture_10/notes.dart';
 import 'package:course_project/Widgets/lecture_10/custom_app_bar_note.dart';
 import 'package:course_project/Widgets/lecture_10/custom_form_field.dart';
 import 'package:course_project/Widgets/lecture_10/custom_note_button.dart';

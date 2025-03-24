@@ -1,20 +1,20 @@
-import 'package:course_project/Models/lecture_7_8/column_list.dart';
+import 'package:course_project/Models/lecture_7_8_9/column_list.dart';
 import 'package:course_project/Services/news_service.dart';
-import 'package:course_project/Widgets/lecture_7_8/custom_column_list.dart';
-import 'package:course_project/Widgets/lecture_7_8/custom_indicator.dart';
+import 'package:course_project/Widgets/lecture_7_8_9/custom_column_list.dart';
+import 'package:course_project/Widgets/lecture_7_8_9/custom_indicator.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
-class CustomScience extends StatefulWidget {
-  const CustomScience({
+class CustomTechnology extends StatefulWidget {
+  const CustomTechnology({
     super.key,
   });
 
   @override
-  State<CustomScience> createState() => _CustomScienceState();
+  State<CustomTechnology> createState() => _CustomTechnologyState();
 }
 
-class _CustomScienceState extends State<CustomScience> {
+class _CustomTechnologyState extends State<CustomTechnology> {
   List<NewsTitle> news = [];
   bool isLoading = true;
 
@@ -25,7 +25,7 @@ class _CustomScienceState extends State<CustomScience> {
   }
 
   Future<void> getNews() async {
-    news = await NewsService(Dio()).getNews(category: 'science');
+    news = await NewsService(Dio()).getNews(category: 'technology');
     isLoading = false;
     setState(() {});
   }

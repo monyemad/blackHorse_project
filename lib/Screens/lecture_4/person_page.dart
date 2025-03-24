@@ -1,4 +1,4 @@
-import 'package:course_project/Models/person.dart';
+import 'package:course_project/Models/lecture_4/person.dart';
 import 'package:flutter/material.dart';
 
 class CarScreen extends StatelessWidget {

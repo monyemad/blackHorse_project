@@ -1,22 +1,21 @@
-import 'package:course_project/Models/lecture_7_8/column_list.dart';
+import 'package:course_project/Models/lecture_7_8_9/column_list.dart';
 import 'package:course_project/Services/news_service.dart';
-import 'package:course_project/Widgets/lecture_7_8/custom_column_list.dart';
-import 'package:course_project/Widgets/lecture_7_8/custom_indicator.dart';
+import 'package:course_project/Widgets/lecture_7_8_9/custom_column_list.dart';
+import 'package:course_project/Widgets/lecture_7_8_9/custom_indicator.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
-class CustomSports extends StatefulWidget {
-  const CustomSports({
+class CustomHealth extends StatefulWidget {
+  const CustomHealth({
     super.key,
   });
 
   @override
-  State<CustomSports> createState() => _CustomSportsState();
+  State<CustomHealth> createState() => _CustomHealthState();
 }
 
-class _CustomSportsState extends State<CustomSports> {
+class _CustomHealthState extends State<CustomHealth> {
   List<NewsTitle> news = [];
-
   bool isLoading = true;
 
   @override
@@ -26,7 +25,7 @@ class _CustomSportsState extends State<CustomSports> {
   }
 
   Future<void> getNews() async {
-    news = await NewsService(Dio()).getNews(category: 'sports');
+    news = await NewsService(Dio()).getNews(category: 'health');
     isLoading = false;
     setState(() {});
   }

@@ -1,14 +1,14 @@
 // ignore_for_file: must_be_immutable
 
-import 'package:course_project/Models/lecture_7_8/row_list.dart';
-import 'package:course_project/Screens/lecture_7_8/business_page.dart';
-import 'package:course_project/Screens/lecture_7_8/entertainment_page.dart';
-import 'package:course_project/Screens/lecture_7_8/general_page.dart';
-import 'package:course_project/Screens/lecture_7_8/health_page.dart';
-import 'package:course_project/Screens/lecture_7_8/science_page.dart';
-import 'package:course_project/Screens/lecture_7_8/sports_page.dart';
-import 'package:course_project/Screens/lecture_7_8/technology_page.dart';
-import 'package:course_project/Widgets/lecture_7_8/custom_row_list.dart';
+import 'package:course_project/Models/lecture_7_8_9/row_list.dart';
+import 'package:course_project/Screens/lecture_7_8_9/business_page.dart';
+import 'package:course_project/Screens/lecture_7_8_9/entertainment_page.dart';
+import 'package:course_project/Screens/lecture_7_8_9/general_page.dart';
+import 'package:course_project/Screens/lecture_7_8_9/health_page.dart';
+import 'package:course_project/Screens/lecture_7_8_9/science_page.dart';
+import 'package:course_project/Screens/lecture_7_8_9/sports_page.dart';
+import 'package:course_project/Screens/lecture_7_8_9/technology_page.dart';
+import 'package:course_project/Widgets/lecture_7_8_9/custom_row_list.dart';
 import 'package:flutter/material.dart';
 
 class CustomCategory extends StatelessWidget {

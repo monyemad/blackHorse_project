@@ -1,4 +1,4 @@
-import 'package:course_project/Widgets/custom_button.dart';
+import 'package:course_project/Widgets/lecture_5/custom_button.dart';
 import 'package:flutter/material.dart';
 
 class PointsScreen extends StatefulWidget {

@@ -1,6 +1,6 @@
 // ignore_for_file: must_be_immutable
 
-import 'package:course_project/Models/time.dart';
+import 'package:course_project/Models/lecture_10/time.dart';
 import 'package:course_project/Screens/lecture_10/edit_note_page.dart';
 import 'package:flutter/material.dart';
 

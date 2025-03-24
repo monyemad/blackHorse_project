@@ -1,22 +1,21 @@
-import 'package:course_project/Models/lecture_7_8/column_list.dart';
+import 'package:course_project/Models/lecture_7_8_9/column_list.dart';
 import 'package:course_project/Services/news_service.dart';
-import 'package:course_project/Widgets/lecture_7_8/custom_column_list.dart';
-import 'package:course_project/Widgets/lecture_7_8/custom_indicator.dart';
+import 'package:course_project/Widgets/lecture_7_8_9/custom_column_list.dart';
+import 'package:course_project/Widgets/lecture_7_8_9/custom_indicator.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
-class CustomEntertainment extends StatefulWidget {
-  const CustomEntertainment({
+class CustomGeneral extends StatefulWidget {
+  const CustomGeneral({
     super.key,
   });
 
   @override
-  State<CustomEntertainment> createState() => _CustomEntertainmentState();
+  State<CustomGeneral> createState() => _CustomGeneralState();
 }
 
-class _CustomEntertainmentState extends State<CustomEntertainment> {
+class _CustomGeneralState extends State<CustomGeneral> {
   List<NewsTitle> news = [];
-
   bool isLoading = true;
 
   @override
@@ -26,7 +25,7 @@ class _CustomEntertainmentState extends State<CustomEntertainment> {
   }
 
   Future<void> getNews() async {
-    news = await NewsService(Dio()).getNews(category: 'entertainment');
+    news = await NewsService(Dio()).getNews(category: 'general');
     isLoading = false;
     setState(() {});
   }
@@ -50,3 +49,5 @@ class _CustomEntertainmentState extends State<CustomEntertainment> {
           );
   }
 }
+
+

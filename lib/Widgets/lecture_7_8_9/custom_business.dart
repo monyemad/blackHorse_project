@@ -1,22 +1,23 @@
-import 'package:course_project/Models/lecture_7_8/column_list.dart';
+import 'package:course_project/Models/lecture_7_8_9/column_list.dart';
 import 'package:course_project/Services/news_service.dart';
-import 'package:course_project/Widgets/lecture_7_8/custom_column_list.dart';
-import 'package:course_project/Widgets/lecture_7_8/custom_indicator.dart';
+import 'package:course_project/Widgets/lecture_7_8_9/custom_column_list.dart';
+import 'package:course_project/Widgets/lecture_7_8_9/custom_indicator.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
-class CustomGeneral extends StatefulWidget {
-  const CustomGeneral({
+class CustomNewsBusiness extends StatefulWidget {
+  const CustomNewsBusiness({
     super.key,
   });
 
   @override
-  State<CustomGeneral> createState() => _CustomGeneralState();
+  State<CustomNewsBusiness> createState() => _CustomNewsBusinessState();
 }
 
-class _CustomGeneralState extends State<CustomGeneral> {
-  List<NewsTitle> news = [];
+class _CustomNewsBusinessState extends State<CustomNewsBusiness> {
   bool isLoading = true;
+
+  List<NewsTitle> news = [];
 
   @override
   void initState() {
@@ -25,7 +26,7 @@ class _CustomGeneralState extends State<CustomGeneral> {
   }
 
   Future<void> getNews() async {
-    news = await NewsService(Dio()).getNews(category: 'general');
+    news = await NewsService(Dio()).getNews(category: 'business');
     isLoading = false;
     setState(() {});
   }
@@ -49,5 +50,3 @@ class _CustomGeneralState extends State<CustomGeneral> {
           );
   }
 }
-
-

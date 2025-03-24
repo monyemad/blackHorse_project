@@ -1,4 +1,4 @@
-import 'package:course_project/Widgets/custom_info.dart';
+import 'package:course_project/Widgets/lecture_4/custom_info.dart';
 import 'package:flutter/material.dart';
 
 class BusinessCard extends StatelessWidget {
