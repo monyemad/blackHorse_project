@@ -1,7 +1,6 @@
 import 'package:course_project/Cubits/notes_cubit.dart';
-import 'package:course_project/Models/lecture_10/date.dart';
+import 'package:course_project/Models/lecture_10/date_and_time.dart';
 import 'package:course_project/Models/lecture_10/notes.dart';
-import 'package:course_project/Models/lecture_10/time.dart';
 import 'package:course_project/Screens/lecture_10/edit_note_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
