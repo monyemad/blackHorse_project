@@ -6,7 +6,8 @@ class CustomFormField extends StatelessWidget {
       required this.controller,
       this.label,
       this.hint,
-      this.maxLines = 1, this.onChange});
+      this.maxLines = 1,
+      this.onChange});
 
   final TextEditingController controller;
   final String? label;

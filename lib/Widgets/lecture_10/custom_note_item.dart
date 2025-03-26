@@ -1,4 +1,5 @@
 import 'package:course_project/Cubits/notes_cubit.dart';
+import 'package:course_project/Models/lecture_10/date.dart';
 import 'package:course_project/Models/lecture_10/notes.dart';
 import 'package:course_project/Models/lecture_10/time.dart';
 import 'package:course_project/Screens/lecture_10/edit_note_page.dart';
@@ -20,12 +21,16 @@ class CustomNote extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
     TimeOfDay now = TimeOfDay.now();
     String formattedTime = Time.formatTimeOfDay(now);
+
+    DateTime today = DateTime.now();
+    String formattedDate = Date.formatDate(today); // Output: March 23, 2025
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 18),
       child: Container(
         margin: EdgeInsets.symmetric(vertical: 8),
         padding: EdgeInsets.only(bottom: 24, top: 6),
-        height: 120,
+        height: 140,
         width: screenWidth,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12), color: Colors.amber),
@@ -40,21 +45,14 @@ class CustomNote extends StatelessWidget {
                     fontFamily: "Dancing Script",
                     fontWeight: FontWeight.w600),
               ),
-              trailing: Column(
-                children: [
-                  Expanded(
-                      child: IconButton(
-                    icon: Icon(
-                      Icons.delete_rounded,
-                      color: Colors.red.shade900,
-                    ),
-                    onPressed: () {context.read<NotesCubit>().deleteAtNotes(index);},
-                  )),
-                  Text(
-                    formattedTime,
-                    style: TextStyle(fontSize: 14, color: Colors.black54),
-                  ),
-                ],
+              trailing: IconButton(
+                icon: Icon(
+                  Icons.delete_rounded,
+                  color: Colors.red.shade900,
+                ),
+                onPressed: () {
+                  context.read<NotesCubit>().deleteAtNotes(index);
+                },
               ),
               onTap: () {
                 Navigator.pushAndRemoveUntil(
@@ -72,6 +70,24 @@ class CustomNote extends StatelessWidget {
                       color: Colors.black87,
                       overflow: TextOverflow.ellipsis,
                       fontFamily: "Dancing Script")),
+            ),
+            SizedBox(height: 12,),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 18),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Text(
+                    formattedDate.toString(),
+                    style: TextStyle(fontSize: 14, color: Colors.black54),
+                  ),
+                  Text(
+                    formattedTime,
+                    style: TextStyle(fontSize: 14, color: Colors.black54),
+                  ),
+                ],
+              ),
             ),
           ],
         ),

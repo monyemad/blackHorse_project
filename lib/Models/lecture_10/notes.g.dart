@@ -18,7 +18,6 @@ class NoteItemAdapter extends TypeAdapter<NoteItem> {
     };
     return NoteItem(
       title: fields[0] as String,
-      date: fields[2] as String,
       subTitle: fields[1] as String,
     );
   }
@@ -30,9 +29,7 @@ class NoteItemAdapter extends TypeAdapter<NoteItem> {
       ..writeByte(0)
       ..write(obj.title)
       ..writeByte(1)
-      ..write(obj.subTitle)
-      ..writeByte(2)
-      ..write(obj.date);
+      ..write(obj.subTitle);
   }
 
   @override

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Time{
+class Time {
   static String formatTimeOfDay(TimeOfDay time) {
     final hours = time.hourOfPeriod == 0 ? 12 : time.hourOfPeriod;
     final period = time.period == DayPeriod.am ? "AM" : "PM";

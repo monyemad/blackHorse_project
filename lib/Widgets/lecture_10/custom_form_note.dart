@@ -28,12 +28,11 @@ class CustomForm extends StatelessWidget {
             message: state.error,
             text: 'Error',
             contentType: ContentType.failure,
-            // color: const Color(0xffC40C0C),
           );
         } else if (state is NotesSuccessState) {
-          CustomSnackBar.show(context, text: 'Success',
+          CustomSnackBar.show(context,
+              text: 'Success',
               message: "List Note Added Successfully",
-              // color: Colors.green.shade700,
               contentType: ContentType.success);
         }
       },
@@ -63,8 +62,8 @@ class CustomForm extends StatelessWidget {
               CustomNoteButton(
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
-                    final note = NoteItem(title: title.text,
-                        date: DateTime.now().toString(),
+                    final note = NoteItem(
+                        title: title.text,
                         subTitle: subTitle.text);
                     context.read<NotesCubit>().addNotes(note);
                     Navigator.pop(context);
