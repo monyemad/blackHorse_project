@@ -1,27 +1,20 @@
-// ignore_for_file: must_be_immutable
-
+import 'package:course_project/Models/lecture_10/notes.dart';
 import 'package:course_project/Screens/lecture_10/note_page.dart';
 import 'package:course_project/Widgets/lecture_10/custom_app_bar_note.dart';
-import 'package:course_project/Widgets/lecture_10/custom_form_field.dart';
+import 'package:course_project/Widgets/lecture_10/custom_text_form_field.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
 
-class EditNoteScreen extends StatefulWidget {
-  String? text;
-  String? description;
-
+class EditNoteScreen extends StatelessWidget {
   EditNoteScreen({
     super.key,
-    this.text,
-    this.description,
+    required this.note,
+    required this.index,
   });
 
-  @override
-  State<EditNoteScreen> createState() => _EditNoteScreenState();
-}
+  final NoteItem note;
+  final int index;
 
-class _EditNoteScreenState extends State<EditNoteScreen> {
-  String? text;
-  String? description;
   final TextEditingController title = TextEditingController();
 
   final TextEditingController subTitle = TextEditingController();
@@ -33,10 +26,11 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
           text: "Edit note",
           icon: Icons.done_rounded,
           onTap: () {
+            context.read<NotesCubit>().updateNotes(widget.index, updatedNote);
             Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(builder: (context) => NoteScreen()),
-                (Route<dynamic> route) => false);
+                    (Route<dynamic> route) => false);
           }),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
@@ -44,9 +38,8 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
           children: [
             CustomFormField(
               controller: title,
-              label: 'Title',
-              onChange: (value) {
-                text = value;
+              onChange: (value){
+                note.title=value;
                 return null;
               },
             ),
@@ -55,9 +48,8 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
             ),
             CustomFormField(
               controller: subTitle,
-              label: 'Description',
-              onChange: (value) {
-                description = value;
+              onChange: (value){
+                note.subTitle=value;
                 return null;
               },
               maxLines: 7,

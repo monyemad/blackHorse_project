@@ -4,12 +4,12 @@ class CustomFormField extends StatelessWidget {
   const CustomFormField(
       {super.key,
       required this.controller,
-      required this.label,
+      this.label,
       this.hint,
       this.maxLines = 1, this.onChange});
 
   final TextEditingController controller;
-  final String label;
+  final String? label;
   final String? hint;
   final int maxLines;
   final String? Function(String?)? onChange;

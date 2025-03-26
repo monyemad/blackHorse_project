@@ -33,7 +33,8 @@ class _CustomTechnologyState extends State<CustomTechnology> {
   @override
   Widget build(BuildContext context) {
     return isLoading
-        ? CustomCircularIndicator()
+        ? CustomCircularIndicator(backgroundColor: Colors.blueGrey,
+      color: Colors.deepOrange,)
         : Expanded(
             child: ListView.builder(
                 physics: const BouncingScrollPhysics(),

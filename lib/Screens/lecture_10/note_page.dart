@@ -1,24 +1,13 @@
-import 'package:course_project/Models/lecture_10/notes.dart';
 import 'package:course_project/Widgets/lecture_10/custom_app_bar_note.dart';
-import 'package:course_project/Widgets/lecture_10/custom_form_field.dart';
-import 'package:course_project/Widgets/lecture_10/custom_note_button.dart';
+import 'package:course_project/Widgets/lecture_10/custom_form_note.dart';
 import 'package:course_project/Widgets/lecture_10/custom_note_list_view.dart';
 import 'package:flutter/material.dart';
 
-class NoteScreen extends StatefulWidget {
+class NoteScreen extends StatelessWidget {
   const NoteScreen({super.key});
 
   @override
-  State<NoteScreen> createState() => _NoteScreenState();
-}
-
-class _NoteScreenState extends State<NoteScreen> {
-  List<NoteItem> notes = [];
-
-  @override
   Widget build(BuildContext context) {
-    TextEditingController title = TextEditingController();
-    TextEditingController subTitle = TextEditingController();
     GlobalKey<FormState> formKey = GlobalKey<FormState>();
     return Scaffold(
       floatingActionButton: FloatingActionButton(
@@ -29,39 +18,7 @@ class _NoteScreenState extends State<NoteScreen> {
               builder: (context) {
                 return Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 18.0),
-                  child: Form(
-                    key: formKey,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        CustomFormField(
-                          controller: title,
-                          label: 'Title',
-                          hint: 'Enter your title',
-                        ),
-                        SizedBox(
-                          height: 15,
-                        ),
-                        CustomFormField(
-                          controller: subTitle,
-                          label: 'Description',
-                          hint: 'Enter your description',
-                          maxLines: 5,
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        CustomNoteButton(
-                          onPressed: () {
-                            if (formKey.currentState!.validate()) {
-                              title.text;
-                              subTitle.text;
-                            }
-                          },
-                        )
-                      ],
-                    ),
-                  ),
+                  child: CustomForm(formKey: formKey,),
                 );
               });
         },

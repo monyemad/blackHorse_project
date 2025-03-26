@@ -1,7 +1,16 @@
+import 'package:course_project/Cubits/notes_cubit.dart';
+import 'package:course_project/Models/lecture_10/notes.dart';
 import 'package:course_project/Screens/lecture_10/note_page.dart';
+import 'package:course_project/Services/hive_helper.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Hive.initFlutter;
+  Hive.registerAdapter(NoteItemAdapter());
+  await HiveHelper.noteInit();
   runApp(const MyApp());
 }
 
@@ -10,10 +19,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(brightness: Brightness.dark, fontFamily: "Poppins"),
-      home: const NoteScreen(),
+    return BlocProvider(
+      create: (context) => NotesCubit()..getNotes(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(brightness: Brightness.dark, fontFamily: "Poppins"),
+        home: const NoteScreen(),
+      ),
     );
   }
 }

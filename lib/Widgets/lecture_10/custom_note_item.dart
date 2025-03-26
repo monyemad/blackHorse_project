@@ -1,25 +1,20 @@
-// ignore_for_file: must_be_immutable
-
+import 'package:course_project/Cubits/notes_cubit.dart';
+import 'package:course_project/Models/lecture_10/notes.dart';
 import 'package:course_project/Models/lecture_10/time.dart';
 import 'package:course_project/Screens/lecture_10/edit_note_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-class CustomNote extends StatefulWidget {
-  const CustomNote(
-      {super.key,
-      // required this.note,
-      required this.title,
-      required this.subTitle});
+class CustomNote extends StatelessWidget {
+  const CustomNote({
+    super.key,
+    required this.notes,
+    required this.index,
+  });
 
-  // final NoteItem note;
-  final String title;
-  final String subTitle;
+  final NoteItem notes;
+  final int index;
 
-  @override
-  State<CustomNote> createState() => _CustomNoteState();
-}
-
-class _CustomNoteState extends State<CustomNote> {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -29,7 +24,7 @@ class _CustomNoteState extends State<CustomNote> {
       padding: const EdgeInsets.symmetric(horizontal: 18),
       child: Container(
         margin: EdgeInsets.symmetric(vertical: 8),
-        padding: EdgeInsets.only(bottom: 24,top: 6),
+        padding: EdgeInsets.only(bottom: 24, top: 6),
         height: 120,
         width: screenWidth,
         decoration: BoxDecoration(
@@ -38,7 +33,7 @@ class _CustomNoteState extends State<CustomNote> {
           children: [
             ListTile(
               title: Text(
-                widget.title,
+                notes.title.toString(),
                 style: TextStyle(
                     fontSize: 24,
                     color: Colors.black,
@@ -47,7 +42,14 @@ class _CustomNoteState extends State<CustomNote> {
               ),
               trailing: Column(
                 children: [
-                  Expanded(child: Icon(Icons.delete_rounded,color: Colors.red.shade900,)),
+                  Expanded(
+                      child: IconButton(
+                    icon: Icon(
+                      Icons.delete_rounded,
+                      color: Colors.red.shade900,
+                    ),
+                    onPressed: () {context.read<NotesCubit>().deleteAtNotes(index);},
+                  )),
                   Text(
                     formattedTime,
                     style: TextStyle(fontSize: 14, color: Colors.black54),
@@ -59,12 +61,12 @@ class _CustomNoteState extends State<CustomNote> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => EditNoteScreen(
-                              text: widget.title,
-                              description: widget.subTitle,
+                              note: notes,
+                              index: index,
                             )),
                     (Route<dynamic> route) => false);
               },
-              subtitle: Text(widget.subTitle,
+              subtitle: Text(notes.subTitle.toString(),
                   style: TextStyle(
                       fontSize: 18,
                       color: Colors.black87,
