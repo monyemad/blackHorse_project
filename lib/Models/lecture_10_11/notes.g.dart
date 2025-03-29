@@ -17,15 +17,15 @@ class NoteItemAdapter extends TypeAdapter<NoteItem> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return NoteItem(
-      title: fields[0] as String,
-      subTitle: fields[1] as String,
+      title: fields[0] as String?,
+      subTitle: fields[1] as String?,
     );
   }
 
   @override
   void write(BinaryWriter writer, NoteItem obj) {
     writer
-      ..writeByte(3)
+      ..writeByte(2)
       ..writeByte(0)
       ..write(obj.title)
       ..writeByte(1)
