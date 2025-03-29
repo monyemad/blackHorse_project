@@ -1,6 +1,6 @@
-import 'package:course_project/Widgets/lecture_10/custom_app_bar_note.dart';
-import 'package:course_project/Widgets/lecture_10/custom_form_note.dart';
-import 'package:course_project/Widgets/lecture_10/custom_note_list_view.dart';
+import 'package:course_project/Widgets/lecture_10_11/custom_app_bar_note.dart';
+import 'package:course_project/Widgets/lecture_10_11/custom_form_note.dart';
+import 'package:course_project/Widgets/lecture_10_11/custom_note_list_view.dart';
 import 'package:flutter/material.dart';
 
 class NoteScreen extends StatelessWidget {

@@ -1,4 +1,4 @@
-import 'package:course_project/Models/lecture_10/notes.dart';
+import 'package:course_project/Models/lecture_10_11/notes.dart';
 import 'package:course_project/Services/hive_helper.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:course_project/Cubits/notes_state.dart';

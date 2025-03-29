@@ -1,14 +1,14 @@
 import 'package:course_project/Cubits/notes_cubit.dart';
-import 'package:course_project/Models/lecture_10/notes.dart';
-import 'package:course_project/Screens/lecture_10/note_page.dart';
+import 'package:course_project/Models/lecture_10_11/notes.dart';
+import 'package:course_project/Screens/lecture_10_11/note_page.dart';
 import 'package:course_project/Services/hive_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
-Future<void> main() async {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Hive.initFlutter;
+  await Hive.initFlutter();
   Hive.registerAdapter(NoteItemAdapter());
   await HiveHelper.noteInit();
   runApp(const MyApp());

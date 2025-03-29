@@ -1,4 +1,4 @@
-import 'package:course_project/Models/lecture_10/notes.dart';
+import 'package:course_project/Models/lecture_10_11/notes.dart';
 
 abstract class NotesState {}
 

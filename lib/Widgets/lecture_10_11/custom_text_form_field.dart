@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 class CustomFormField extends StatelessWidget {
   const CustomFormField(
       {super.key,
-      required this.controller,
-      this.label,
-      this.hint,
-      this.maxLines = 1,
-      this.onChange});
+        required this.controller,
+        this.label,
+        this.hint,
+        this.maxLines = 1,
+        this.onChange});
 
   final TextEditingController controller;
   final String? label;

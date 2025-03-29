@@ -1,7 +1,7 @@
-import 'package:course_project/Models/lecture_10/notes.dart';
-import 'package:course_project/Screens/lecture_10/note_page.dart';
-import 'package:course_project/Widgets/lecture_10/custom_app_bar_note.dart';
-import 'package:course_project/Widgets/lecture_10/custom_text_form_field.dart';
+import 'package:course_project/Models/lecture_10_11/notes.dart';
+import 'package:course_project/Screens/lecture_10_11/note_page.dart';
+import 'package:course_project/Widgets/lecture_10_11/custom_app_bar_note.dart';
+import 'package:course_project/Widgets/lecture_10_11/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:course_project/Cubits/notes_cubit.dart';

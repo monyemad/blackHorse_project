@@ -1,6 +1,6 @@
 import 'package:course_project/Cubits/notes_cubit.dart';
 import 'package:course_project/Cubits/notes_state.dart';
-import 'package:course_project/Widgets/lecture_10/custom_note_item.dart';
+import 'package:course_project/Widgets/lecture_10_11/custom_note_item.dart';
 import 'package:course_project/Widgets/lecture_7_8_9/custom_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
