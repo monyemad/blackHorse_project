@@ -1,4 +1,3 @@
-// import 'package:course_project/Screens/lecture_10_11/add_note_page.dart';
 import 'package:course_project/Widgets/lecture_10_11/custom_app_bar_note.dart';
 import 'package:course_project/Widgets/lecture_10_11/custom_form_note.dart';
 import 'package:course_project/Widgets/lecture_10_11/custom_note_list_view.dart';
@@ -14,13 +13,14 @@ class NoteScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         shape: CircleBorder(),
         onPressed: () {
-          // Navigator.push(context, MaterialPageRoute(builder: (context){return AddNoteScreen();}));
           showModalBottomSheet(
               context: context,
               builder: (context) {
                 return Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 18.0),
-                  child: CustomForm(formKey: formKey,),
+                  child: CustomForm(
+                    formKey: formKey,
+                  ),
                 );
               });
         },

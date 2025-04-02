@@ -40,7 +40,7 @@ class CustomForm extends StatelessWidget {
         return Form(
           key: formKey,
           child: Column(
-            // mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CustomFormField(
                 controller: title,
@@ -54,7 +54,7 @@ class CustomForm extends StatelessWidget {
                 controller: subTitle,
                 label: "Description",
                 hint: 'Enter your description',
-                maxLines: 5,
+                maxLines: 7,
               ),
               SizedBox(
                 height: 20,
